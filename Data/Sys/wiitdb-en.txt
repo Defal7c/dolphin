@@ -3232,6 +3232,7 @@ SRXP52 = Generator Rex: Agent of Providence
 SRYEAF = ExerBeat: Gym Class Workout
 SRYJAF = Fitness Party
 SRYPAF = ExerBeat: Gym Class Workout
+SRZE8P = Sonic Riders: Regravitified
 SS2PFR = Winter Sports 2012: Feel the Spirit
 SS3EWR = Sesame Street: Elmo's A-to-Zoo Adventure
 SS3PWR = Sesame Street: Elmo's A-to-Zoo Adventure
