@@ -163,6 +163,8 @@ std::string ArtworkForGameId(const std::string& gameid)
       "RSP",  // RSPE01: Wii Sports
       "RZT",  // RZTE01: Wii Sports Resort
       "SX4",  // SX4E01: Xenoblade Chronicles
+      "GXE",  // GXEE8P: Sonic Riders
+      "RS9",  // RS9P8P: Sonic Riders: Zero Gravity
   };
 
   std::string region_neutral_gameid = gameid.substr(0, 3);
