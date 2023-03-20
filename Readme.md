@@ -1,4 +1,4 @@
-# [logo](/Data/dolphin-emu.png)BrGL-Dolphin
+# ![logo](/Data/dolphin-emu.png "logo") BrGL-Dolphin
 ## A Sonic Riders centric fork of Dolphin.
 
 This project aims to be an updated and modified version of Dolphin, centered around **Sonic Riders** and
