@@ -286,15 +286,25 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
   if (game_artwork.empty())
   {
     discord_presence.largeImageKey = "dolphin_logo";
-    discord_presence.largeImageText = "Dolphin is an emulator for the GameCube and the Wii.";
+    discord_presence.largeImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
   }
   else
   {
-    discord_presence.largeImageKey = game_artwork.c_str();
+    if (SConfig::GetInstance().GetGameID() == "GXEE8P") 
+    {
+      discord_presence.largeImageKey = "gxee8p";
+    discord_presence.largeImageText = "Playing Sonic Riders!";
+      discord_presence.smallImageKey = "dolphin_logo";
+      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
+    }
+    else
+    {
+      discord_presence.largeImageKey = "dolphin_logo";
+    }
+
     discord_presence.largeImageText = title.c_str();
-    discord_presence.smallImageKey = "dolphin_logo";
-    discord_presence.smallImageText = "Dolphin is an emulator for the GameCube and the Wii.";
   }
+
   discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
   discord_presence.startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
                                         std::chrono::system_clock::now().time_since_epoch())
