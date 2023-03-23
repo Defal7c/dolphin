@@ -6,12 +6,19 @@ This project aims to be an updated and modified version of Dolphin, centered aro
 
 Features:
   - Up-to-date code base (based on Dolphin 5.0-18992 currently)
-  - ExGL Configurations
-  - Gecko Codes for 16:9 support and other _QoL_ stuff 
-  - Controllers presets (also from ExGL)
+  - ExGL Configurations, codes and profiles
+  - New Gecko Codes and other _QoL_ stuff 
+  - New Controllers presets
   - Better Discord Rich Presence (it shows when you are playing Sonic Riders!)
-  - Better Linux support
+  - ~~Better Linux support~~ (Right now we only have an AppImage that I tested on Arch Linux)
   - ~~OpenBSD support~~ (in the near future)
+
+Credits:
+  - BlueSwordM for ExGL-Dolphin!
+  - Magische for the Icon art
+  - Cauan for configuration files and Gecko Codes
+  - The Sonic Riders DX and TE teams for amazing mods!
+  - You, the one reading this for, well... reading all of this!
 
 ## Original Dolphin ReadMe:
 
