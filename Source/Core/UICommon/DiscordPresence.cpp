@@ -291,55 +291,49 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
   else
   {
     discord_presence.largeImageText = title.c_str();
-    std::string GAMEID = SConfig::GetInstance().GetGameID();
 
-    if (GAMEID == "000000")  // nothing
+    // Sonic Riders
+    if (SConfig::GetInstance().GetGameID() == "GXEE8P")
     {
-      discord_presence.largeImageKey = "dolphin_logo";
-    }
-    else
-    {
-      // Sonic Riders
-      if (GAMEID == "GXEE8P")
-      {
-        discord_presence.largeImageKey = "sonic_riders";
-        discord_presence.largeImageText = "Playing Sonic Riders!";
-      }
-      else if (GAMEID == "RS9E8P")  // Sonic Riders Zero Gravity
-      {
-        discord_presence.largeImageKey = "zero_gravity";
-        discord_presence.largeImageText = "Playing Sonic Riders: Zero Gravity!";
-      }
-      /*
-      else if (GAMEID == "SRDX8P")
-      {
-        discord_presence.largeImageKey = "??????";
-        discord_presence.largeImageText = "??????";
-      }
-      else if (GAMEID == "SRZE8P")
-      {
-        discord_presence.largeImageKey = "??????";
-        discord_presence.largeImageText = "??????";
-      }
-      */
-      /*
-      else if (GAMEID == "??????")
-      {
-        discord_presence.largeImageKey = "??????";
-        discord_presence.largeImageText = "??????";
-      }
-      */
-
+      discord_presence.largeImageKey = "gxee8p";
+      discord_presence.largeImageText = "Playing Sonic Riders!";
 
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
-  }
+    else if (SConfig::GetInstance().GetGameID() == "RS9E8P")  // Sonic Riders Zero Gravity
+    {
+      discord_presence.largeImageKey = "zero_gravity";
+      discord_presence.largeImageText = "Playing Sonic Riders: Zero Gravity!";
 
-  discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
-  discord_presence.startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
+      discord_presence.smallImageKey = "dolphin_logo";
+      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
+    }
+    /*
+    else if (GAMEID == "SRDX8P")
+    {
+      discord_presence.largeImageKey = "??????";
+      discord_presence.largeImageText = "??????";
+    }
+    else if (GAMEID == "SRZE8P")
+    {
+      discord_presence.largeImageKey = "??????";
+      discord_presence.largeImageText = "??????";
+    }
+    */
+    /*
+    else if (GAMEID == "??????")
+    {
+      discord_presence.largeImageKey = "??????";
+      discord_presence.largeImageText = "??????";
+    }
+    */
+    
+      discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
+      discord_presence.startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
                                         std::chrono::system_clock::now().time_since_epoch())
                                         .count();
+  }
 
   if (party_size > 0)
   {
