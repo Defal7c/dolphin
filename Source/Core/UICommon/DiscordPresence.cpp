@@ -292,8 +292,7 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
   {
     discord_presence.largeImageText = title.c_str();
 
-    // Sonic Riders
-    if (SConfig::GetInstance().GetGameID() == "GXEE8P")
+    if (SConfig::GetInstance().GetGameID() == "GXEE8P") // Sonic Riders
     {
       discord_presence.largeImageKey = "gxee8p";
       discord_presence.largeImageText = "Playing Sonic Riders!";
@@ -309,18 +308,16 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
-    /*
-    else if (GAMEID == "SRDX8P")
+    else if (SConfig::GetInstance().GetGameID() == "SRDX8P")
     {
-      discord_presence.largeImageKey = "??????";
-      discord_presence.largeImageText = "??????";
+      discord_presence.largeImageKey = "srdx8p";
+      discord_presence.largeImageText = "Playing Sonic Riders DX 2.1!";
     }
-    else if (GAMEID == "SRZE8P")
+    else if (SConfig::GetInstance().GetGameID() == "SRZE8P")
     {
-      discord_presence.largeImageKey = "??????";
-      discord_presence.largeImageText = "??????";
+      discord_presence.largeImageKey = "srze8p";
+      discord_presence.largeImageText = "Playing Sonic Regravitified!";
     }
-    */
     /*
     else if (GAMEID == "??????")
     {
@@ -328,12 +325,12 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
       discord_presence.largeImageText = "??????";
     }
     */
-    
-      discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
-      discord_presence.startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
+  }
+
+  discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
+  discord_presence.startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
                                         std::chrono::system_clock::now().time_since_epoch())
                                         .count();
-  }
 
   if (party_size > 0)
   {
