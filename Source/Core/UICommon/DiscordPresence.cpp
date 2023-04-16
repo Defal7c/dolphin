@@ -312,11 +312,17 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
     {
       discord_presence.largeImageKey = "srdx8p";
       discord_presence.largeImageText = "Playing Sonic Riders DX 2.1!";
+
+      discord_presence.smallImageKey = "dolphin_logo";
+      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
     else if (SConfig::GetInstance().GetGameID() == "SRZE8P")
     {
       discord_presence.largeImageKey = "srze8p";
       discord_presence.largeImageText = "Playing Sonic Regravitified!";
+
+      discord_presence.smallImageKey = "dolphin_logo";
+      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
     /*
     else if (GAMEID == "??????")
