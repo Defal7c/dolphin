@@ -300,6 +300,14 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
+    else if (SConfig::GetInstance().GetGameID() == "SRZE8P")
+    {
+      discord_presence.largeImageKey = "srze8p";
+      discord_presence.largeImageText = "Playing Sonic Regravitified!";
+
+      discord_presence.smallImageKey = "dolphin_logo";
+      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
+    }
     else if (SConfig::GetInstance().GetGameID() == "RS9E8P")  // Sonic Riders Zero Gravity
     {
       discord_presence.largeImageKey = "zero_gravity";
@@ -316,14 +324,7 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
-    else if (SConfig::GetInstance().GetGameID() == "SRZE8P")
-    {
-      discord_presence.largeImageKey = "srze8p";
-      discord_presence.largeImageText = "Playing Sonic Regravitified!";
-
-      discord_presence.smallImageKey = "dolphin_logo";
-      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
-    }
+    
     /*
     else if (GAMEID == "??????")
     {
