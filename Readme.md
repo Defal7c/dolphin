@@ -10,7 +10,7 @@ Features:
   - New Gecko Codes and other _QoL_ stuff 
   - New Controllers presets
   - Better Discord Rich Presence (it shows when you are playing Sonic Riders!)
-  - ~~Better Linux support~~ (Right now we only have an AppImage that I tested on Arch Linux)
+  - Better Linux support (Right now we only have an AppImage that I tested on Linux Mint and Arch Linux)
   - ~~OpenBSD support~~ (in the near future)
 
 Credits:
