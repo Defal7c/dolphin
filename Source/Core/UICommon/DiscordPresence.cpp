@@ -291,11 +291,13 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
   else
   {
     discord_presence.largeImageText = title.c_str();
+    discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
 
     if (SConfig::GetInstance().GetGameID() == "GXEE8P") // Sonic Riders
     {
       discord_presence.largeImageKey = "gxee8p";
       discord_presence.largeImageText = "Playing Sonic Riders!";
+      discord_presence.details = "Sonic Riders";
 
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
@@ -304,6 +306,7 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
     {
       discord_presence.largeImageKey = "srze8p";
       discord_presence.largeImageText = "Playing Sonic Regravitified!";
+      discord_presence.details = "Sonic Riders: Regravitified";
 
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
@@ -312,19 +315,30 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
     {
       discord_presence.largeImageKey = "zero_gravity";
       discord_presence.largeImageText = "Playing Sonic Riders: Zero Gravity!";
+      discord_presence.details = "Sonic Riders: Zero Gravity";
 
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
-    else if (SConfig::GetInstance().GetGameID() == "SRDX8P")
+    else if (SConfig::GetInstance().GetGameID() == "GXSRDX")
     {
       discord_presence.largeImageKey = "srdx8p";
-      discord_presence.largeImageText = "Playing Sonic Riders DX 2.1!";
+      discord_presence.largeImageText = "Playing Sonic Riders DX!";
+      discord_presence.details = "Sonic Riders DX";
 
       discord_presence.smallImageKey = "dolphin_logo";
       discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
     }
-    
+    else if (SConfig::GetInstance().GetGameID() == "GXSRTE")
+    {
+      discord_presence.largeImageKey = "srte";
+      discord_presence.largeImageText = "Playing Sonic Riders TE";
+      discord_presence.details = "Sonic Riders TE 2.2";
+
+      discord_presence.smallImageKey = "dolphin_logo";
+      discord_presence.smallImageText = "BrGL-Dolphin is a Sonic Riders centric fork.";
+    }
+
     /*
     else if (GAMEID == "??????")
     {
@@ -334,7 +348,6 @@ void UpdateDiscordPresence(int party_size, SecretType type, const std::string& s
     */
   }
 
-  discord_presence.details = title.empty() ? "Not in-game" : title.c_str();
   discord_presence.startTimestamp = std::chrono::duration_cast<std::chrono::seconds>(
                                         std::chrono::system_clock::now().time_since_epoch())
                                         .count();
