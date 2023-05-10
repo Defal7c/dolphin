@@ -27,7 +27,7 @@ const std::string& GetScmRevStr()
 #endif
 */
 
-  static const std::string scm_rev_str = "BrGL-Dolphin V0.4 "
+  static const std::string scm_rev_str = "BrGL-Dolphin V0.4.1 "
 
 #ifdef __INTEL_COMPILER
       BUILD_TYPE_STR SCM_DESC_STR "-ICC";
