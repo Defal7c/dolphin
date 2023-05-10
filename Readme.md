@@ -1,4 +1,6 @@
 # BrGL-Dolphin
+
+![fluminense](https://cdn.discordapp.com/attachments/779716685086064640/1105979199010897929/BrGL_Dolphin_Small.png)
 ## A Sonic Riders centric fork of Dolphin.
 
 This project aims to be an updated and modified version of Dolphin, centered around **Sonic Riders** and
@@ -9,8 +11,8 @@ Features:
   - ExGL Configurations, codes and profiles
   - New Gecko Codes and other _QoL_ stuff 
   - New Controllers presets
-  - Better Discord Rich Presence (it shows when you are playing Sonic Riders!)
-  - Better Linux support (Right now we only have an AppImage that I tested on Linux Mint and Arch Linux)
+  - Better Discord Rich Presence (it shows which mod you are playing!)
+  - Better Linux support
   - ~~OpenBSD support~~ (in the near future)
 
 Credits:
@@ -19,6 +21,13 @@ Credits:
   - Cauan for configuration files and Gecko Codes
   - The Sonic Riders DX and TE teams for amazing mods!
   - You, the one reading this for, well... reading all of this!
+
+## Warning for Linux users
+
+Because we are using an AppImage for now, your configs are stored inside `~/.config/brgl-dolphin` and some extra stuff inside `~/.local/share/brgl-dolphin`.
+So you can have both dolphin-emu and brgl-dolphin in the same system!
+
+If you want a `Flatpak`, `.deb` or an `Arch linux makepkg`, please consider opening an Issue!
 
 ## Original Dolphin ReadMe:
 
